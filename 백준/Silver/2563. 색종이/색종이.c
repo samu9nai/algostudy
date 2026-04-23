@@ -1,0 +1,24 @@
+#include <stdio.h> 
+
+int main()
+{ 
+    int arr[101][101] = {0, }; 
+    int t; 
+    int cnt = 0;
+    int i, j;
+    scanf("%d", &t); 
+    while (t--)
+    { 
+        int a, b; 
+        scanf("%d %d", &a, &b); 
+        for (i = 0; i < 10; i++) 
+            for (j = 0; j < 10; j++) 
+                arr[a + i][b + j] = 1;
+    }
+
+        for (i = 0; i < 100; i++) 
+            for (j = 0; j < 100; j++)
+                if (arr[i][j] == 1) cnt++; 
+        
+        printf("%d", cnt); 
+}

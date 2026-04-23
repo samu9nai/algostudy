@@ -1,0 +1,67 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static int[] dr = { -1, 0, 1, 0 }; // delta row
+    static int[] dc = { 0, 1, 0, -1 }; // delta column
+    static int n, m;
+    static boolean[][] lettuce;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st;
+
+        int t = Integer.parseInt(br.readLine());
+        while (t-- > 0) {
+            st = new StringTokenizer(br.readLine());
+            m = Integer.parseInt(st.nextToken());
+            n = Integer.parseInt(st.nextToken());
+            int k = Integer.parseInt(st.nextToken());
+
+            lettuce = new boolean[n][m];
+            while (k-- > 0) {
+                st = new StringTokenizer(br.readLine());
+                int c = Integer.parseInt(st.nextToken());
+                int r = Integer.parseInt(st.nextToken());
+                lettuce[r][c] = true;
+            }
+
+            int worm = 0;
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    if (lettuce[i][j]) {
+                        bfs(i, j);
+                        worm++;
+                    }
+                }
+            }
+
+            sb.append(worm).append("\n");
+        }
+
+        System.out.println(sb);
+    }
+
+    static void bfs(int sr, int sc) {
+        Queue<int[]> q = new ArrayDeque<>();
+        q.offer(new int[]{ sr, sc });
+
+        lettuce[sr][sc] = false;
+
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+
+            for (int d = 0; d < 4; d++) {
+                int nr = cur[0] + dr[d];
+                int nc = cur[1] + dc[d];
+
+                if (nr < 0 || nr >= n || nc < 0 || nc >= m) continue;
+                if (!lettuce[nr][nc]) continue;
+
+                q.offer(new int[]{nr, nc});
+                lettuce[nr][nc] = false;
+            }
+        }
+    }
+}
