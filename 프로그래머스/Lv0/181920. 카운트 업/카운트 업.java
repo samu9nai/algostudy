@@ -1,14 +1,10 @@
-import java.util.*;
-
 class Solution {
-    public int[] solution(int start_num, int end_num) {
-        List<Integer> list = new ArrayList<>();
-        for (int i = start_num; i <= end_num; i++) {
-            list.add(i);
-        }
+    public int[] solution(int start, int end) {
+        int[] answer = new int[end - start + 1];
         
-        return list.stream()
-                .mapToInt(i -> i)
-                .toArray();
+        for(int i = 0; i <= end - start; i++) {
+            answer[i] = start + i;
+        }
+        return answer;
     }
 }
