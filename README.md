@@ -1,2 +1,6 @@
 # algostudy
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+
+---
+
+- [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub)를 통해 BOJ, Programmers에서 작성한 정답 코드를 자동 커밋합니다.
+- [CodeTree](https://www.codetree.ai/ko/github) Github 연동 기능을 통해 작성한 정답 코드를 자동 커밋합니다.
