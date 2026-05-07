@@ -7,20 +7,18 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
 
         int[] dp = new int[n + 1];
-        int[] t = new int[n];
-        int[] p = new int[n];
-        for (int i = 0; i < n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            t[i] = Integer.parseInt(st.nextToken());
-            p[i] = Integer.parseInt(st.nextToken());
-        }
-
         for (int day = 0; day < n; day++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+
+            int time = Integer.parseInt(st.nextToken());
+            int profit = Integer.parseInt(st.nextToken());
+
             dp[day + 1] = Math.max(dp[day + 1], dp[day]);
 
-            int end = day + t[day];
-            if (end <= n) {
-                dp[end] = Math.max(dp[end], dp[day] + p[day]);
+            int endDay = day + time;
+
+            if (endDay <= n) {
+                dp[endDay] = Math.max(dp[endDay], dp[day] + profit);
             }
         }
 
