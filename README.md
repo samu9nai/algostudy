@@ -90,8 +90,10 @@ LeetCode 문제별 README는 템플릿 기반으로 생성됩니다.
 
 - 문제 번호, 제목, 난이도, 태그, 링크를 정리합니다.
 - 예제 입력/출력과 제약 조건을 가능한 범위에서 파싱합니다.
-- 핵심 아이디어, 구현 흐름, 주의할 점, 복잡도 섹션을 생성합니다.
 - 문제 설명은 가능한 경우 LeetCode/NeetCode에서 가져와 Markdown으로 보관합니다.
+- 핵심 아이디어, 구현 흐름, 주의할 점, 복잡도 섹션은 Gemini API가 있으면 한국어 분석으로 생성합니다.
+- Gemini API를 사용할 수 없거나 quota가 막히면 기존 로컬 fallback 분석으로 생성합니다.
+- 생성된 AI 분석은 README 숨김 marker로 캐시되어 문제 설명 또는 풀이 코드가 바뀔 때만 다시 생성됩니다.
 - 제출 코드는 `solution.<ext>` 형식으로 저장합니다.
 
 템플릿은 source repository의 [`scripts/templates/leetcode-readme.md`](https://github.com/samu9nai/neetcode-submissions/blob/main/scripts/templates/leetcode-readme.md)에서 관리합니다.
