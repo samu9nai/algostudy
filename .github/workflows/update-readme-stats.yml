@@ -1,0 +1,122 @@
+name: Update README stats
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "백준/**"
+      - "프로그래머스/**"
+      - "코드트리/**"
+      - "LeetCode/**"
+      - ".github/workflows/update-readme-stats.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-readme-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update stats block
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const branch = 'main';
+
+            const branchInfo = await github.rest.repos.getBranch({
+              owner,
+              repo,
+              branch,
+            });
+
+            const tree = await github.rest.git.getTree({
+              owner,
+              repo,
+              tree_sha: branchInfo.data.commit.sha,
+              recursive: 'true',
+            });
+
+            if (tree.data.truncated) {
+              throw new Error('Repository tree was truncated by GitHub API; stats may be incomplete.');
+            }
+
+            const paths = tree.data.tree
+              .filter((item) => item.type === 'blob')
+              .map((item) => item.path);
+
+            const count = (pattern) => paths.filter((filePath) => pattern.test(filePath)).length;
+            const stats = [
+              ['BOJ', count(/^백준\/[^/]+\/[^/]+\/README\.md$/)],
+              ['Programmers', count(/^프로그래머스\/[^/]+\/[^/]+\/README\.md$/)],
+              ['CodeTree', count(/^코드트리\/[^/]+\/[^/]+\/README\.md$/)],
+              ['LeetCode / NeetCode', count(/^LeetCode\/[^/]+\/[^/]+\/README\.md$/)],
+            ];
+
+            const parts = new Intl.DateTimeFormat('ko-KR', {
+              timeZone: 'Asia/Seoul',
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+            }).formatToParts(new Date()).reduce((acc, part) => {
+              acc[part.type] = part.value;
+              return acc;
+            }, {});
+            const dateText = `${parts.year}년 ${parts.month}월 ${parts.day}일 기준입니다.`;
+
+            const nextStatsBlock = [
+              '<!-- STATS:START -->',
+              dateText,
+              '',
+              '| 플랫폼 | 문제 수 |',
+              '| --- | ---: |',
+              ...stats.map(([platform, total]) => `| ${platform} | ${total} |`),
+              '<!-- STATS:END -->',
+            ].join('\n');
+
+            const readme = await github.rest.repos.getContent({
+              owner,
+              repo,
+              path: 'README.md',
+              ref: branch,
+            });
+
+            const currentContent = Buffer.from(readme.data.content, 'base64').toString('utf8');
+            const statsPattern = /<!-- STATS:START -->[\s\S]*?<!-- STATS:END -->/;
+
+            if (!statsPattern.test(currentContent)) {
+              throw new Error('README stats markers were not found.');
+            }
+
+            const nextContent = currentContent.replace(statsPattern, nextStatsBlock);
+
+            if (currentContent === nextContent) {
+              core.info('README stats are already up to date.');
+              return;
+            }
+
+            await github.rest.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path: 'README.md',
+              branch,
+              message: 'Update README problem stats',
+              content: Buffer.from(nextContent, 'utf8').toString('base64'),
+              sha: readme.data.sha,
+              committer: {
+                name: 'github-actions[bot]',
+                email: '41898282+github-actions[bot]@users.noreply.github.com',
+              },
+              author: {
+                name: 'github-actions[bot]',
+                email: '41898282+github-actions[bot]@users.noreply.github.com',
+              },
+            });
