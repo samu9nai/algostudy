@@ -15,6 +15,13 @@
   "url": "https://leetcode.com/problems/daily-temperatures/",
   "language": "Java",
   "solutionFile": "solution.java",
+  "summary": "You are given an array of integers temperatures where temperatures[i] represents the daily temperatures on the ith day. Return an array result where result[i] is the number of days after the ith day before a warmer temperature appears on a future day. If there is no day in the future where a warmer temperature will ap…",
+  "constraints": [
+    "1 <= temperatures.length <= 1000.",
+    "1 <= temperatures[i] <= 100"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
   "submittedAt": "2026-05-11T16:33:18+09:00",
-  "generatedAt": "2026-05-14T03:59:37.091Z"
+  "generatedAt": "2026-05-14T04:16:38.361Z"
 }

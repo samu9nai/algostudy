@@ -14,6 +14,12 @@
   "url": "https://leetcode.com/problems/valid-parentheses/",
   "language": "Java",
   "solutionFile": "solution.java",
+  "summary": "You are given a string s consisting of the following characters: '(', ')', '{', '}', '[' and ']'. The input string s is valid if and only if: Return true if s is a valid string, and false otherwise.",
+  "constraints": [
+    "1 <= s.length <= 1000"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
   "submittedAt": "2026-05-11T15:52:16+09:00",
-  "generatedAt": "2026-05-14T03:59:37.084Z"
+  "generatedAt": "2026-05-14T04:16:38.355Z"
 }

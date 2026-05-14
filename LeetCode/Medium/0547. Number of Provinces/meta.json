@@ -16,6 +16,16 @@
   "url": "https://leetcode.com/problems/number-of-provinces/",
   "language": "Java",
   "solutionFile": "solution.java",
+  "summary": "There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c. A province is a group of directly or indirectly connected cities and no other cities outside of the group. You…",
+  "constraints": [
+    "1 <= n <= 200",
+    "n == isConnected.length == isConnected[i].length",
+    "isConnected[i][j] is either 0 or 1.",
+    "isConnected[i][i] == 1",
+    "isConnected[i][j] == isConnected[j][i]"
+  ],
+  "timeComplexity": null,
+  "spaceComplexity": null,
   "submittedAt": "2026-05-13T14:58:08+09:00",
-  "generatedAt": "2026-05-14T03:59:37.090Z"
+  "generatedAt": "2026-05-14T04:16:38.360Z"
 }

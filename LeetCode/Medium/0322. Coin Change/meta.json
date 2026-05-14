@@ -15,6 +15,14 @@
   "url": "https://leetcode.com/problems/coin-change/",
   "language": "Java",
   "solutionFile": "solution.java",
+  "summary": "You are given an integer array coins representing coins of different denominations (e.g. 1 dollar, 5 dollars, etc) and an integer amount representing a target amount of money. Return the fewest number of coins that you need to make up the exact target amount. If it is impossible to make up the amount, return -1. You m…",
+  "constraints": [
+    "1 <= coins.length <= 10",
+    "1 <= coins[i] <= 2^31 - 1",
+    "0 <= amount <= 10000"
+  ],
+  "timeComplexity": "O(n * t)",
+  "spaceComplexity": "O(t)",
   "submittedAt": "2026-05-13T13:31:02+09:00",
-  "generatedAt": "2026-05-14T03:59:37.089Z"
+  "generatedAt": "2026-05-14T04:16:38.359Z"
 }
