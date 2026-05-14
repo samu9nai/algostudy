@@ -102,3 +102,15 @@ LeetCode 문제별 README는 템플릿 기반으로 생성됩니다.
 - 문제별 README는 링크, 메타데이터, 요약, 풀이 흐름을 빠르게 다시 보기 위한 용도로 사용합니다.
 - BaekjoonHub와 CodeTree가 관리하는 폴더는 별도 정규화 스크립트가 수정하지 않습니다.
 - LeetCode 정규화 파이프라인은 `LeetCode/` 폴더만 갱신합니다.
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0001-two-sum](https://github.com/samu9nai/algostudy/tree/main/Java/0001-two-sum/) | Easy |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0001-two-sum](https://github.com/samu9nai/algostudy/tree/main/Java/0001-two-sum/) | Easy |
+<!---LeetCode Topics End-->
