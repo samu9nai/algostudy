@@ -1,0 +1,19 @@
+{
+  "platform": "LeetCode",
+  "sourcePlatform": "NeetCode",
+  "sourceCategory": "Data Structures & Algorithms",
+  "sourcePath": "Data Structures & Algorithms/two-integer-sum/submission-1.java",
+  "id": "1",
+  "title": "Two Sum",
+  "slug": "two-sum",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "url": "https://leetcode.com/problems/two-sum/",
+  "language": "Java",
+  "solutionFile": "solution.java",
+  "submittedAt": "2026-05-12T11:12:14+09:00",
+  "generatedAt": "2026-05-14T03:59:37.081Z"
+}

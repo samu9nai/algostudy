@@ -1,0 +1,20 @@
+{
+  "platform": "LeetCode",
+  "sourcePlatform": "NeetCode",
+  "sourceCategory": "Data Structures & Algorithms",
+  "sourcePath": "Data Structures & Algorithms/shortest-path-in-binary-matrix/submission-0.java",
+  "id": "1091",
+  "title": "Shortest Path in Binary Matrix",
+  "slug": "shortest-path-in-binary-matrix",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+  "language": "Java",
+  "solutionFile": "solution.java",
+  "submittedAt": "2026-05-14T10:44:18+09:00",
+  "generatedAt": "2026-05-14T03:59:37.094Z"
+}

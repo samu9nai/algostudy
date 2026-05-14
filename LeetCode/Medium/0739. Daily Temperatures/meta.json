@@ -1,0 +1,20 @@
+{
+  "platform": "LeetCode",
+  "sourcePlatform": "NeetCode",
+  "sourceCategory": "Data Structures & Algorithms",
+  "sourcePath": "Data Structures & Algorithms/daily-temperatures/submission-0.java",
+  "id": "739",
+  "title": "Daily Temperatures",
+  "slug": "daily-temperatures",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "url": "https://leetcode.com/problems/daily-temperatures/",
+  "language": "Java",
+  "solutionFile": "solution.java",
+  "submittedAt": "2026-05-11T16:33:18+09:00",
+  "generatedAt": "2026-05-14T03:59:37.091Z"
+}

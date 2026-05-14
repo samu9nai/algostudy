@@ -1,0 +1,21 @@
+{
+  "platform": "LeetCode",
+  "sourcePlatform": "NeetCode",
+  "sourceCategory": "Data Structures & Algorithms",
+  "sourcePath": "Data Structures & Algorithms/number-of-provinces/submission-0.java",
+  "id": "547",
+  "title": "Number of Provinces",
+  "slug": "number-of-provinces",
+  "difficulty": "Medium",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Graph Theory"
+  ],
+  "url": "https://leetcode.com/problems/number-of-provinces/",
+  "language": "Java",
+  "solutionFile": "solution.java",
+  "submittedAt": "2026-05-13T14:58:08+09:00",
+  "generatedAt": "2026-05-14T03:59:37.090Z"
+}

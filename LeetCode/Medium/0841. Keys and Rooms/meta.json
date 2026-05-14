@@ -1,0 +1,20 @@
+{
+  "platform": "LeetCode",
+  "sourcePlatform": "LeetCode",
+  "sourceCategory": "Only in LeetCode",
+  "sourcePath": "Only in LeetCode/0841-keys-and-rooms/0841-keys-and-rooms.java",
+  "id": "841",
+  "title": "Keys and Rooms",
+  "slug": "keys-and-rooms",
+  "difficulty": "Medium",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph Theory"
+  ],
+  "url": "https://leetcode.com/problems/keys-and-rooms/",
+  "language": "Java",
+  "solutionFile": "solution.java",
+  "submittedAt": "2026-05-13T15:50:27+09:00",
+  "generatedAt": "2026-05-14T03:59:37.093Z"
+}

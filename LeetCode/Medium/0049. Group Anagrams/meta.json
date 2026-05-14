@@ -1,0 +1,21 @@
+{
+  "platform": "LeetCode",
+  "sourcePlatform": "NeetCode",
+  "sourceCategory": "Data Structures & Algorithms",
+  "sourcePath": "Data Structures & Algorithms/anagram-groups/submission-1.java",
+  "id": "49",
+  "title": "Group Anagrams",
+  "slug": "group-anagrams",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "url": "https://leetcode.com/problems/group-anagrams/",
+  "language": "Java",
+  "solutionFile": "solution.java",
+  "submittedAt": "2026-05-12T16:01:24+09:00",
+  "generatedAt": "2026-05-14T03:59:37.085Z"
+}
