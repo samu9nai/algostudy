@@ -46,7 +46,7 @@ Since we were able to visit every room, we return true.
 
 ## 🧮 정답 계산식
 
-0번 방에서 시작해 열쇠로 도달 가능한 방의 수가 전체 방 수와 같아야 합니다.
+정답은 조건을 만족하는 노드/칸/컴포넌트를 탐색하며 누적합니다.
 
 ## 🔍 구현 흐름
 
