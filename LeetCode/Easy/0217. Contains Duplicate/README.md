@@ -15,10 +15,29 @@
 
 ## 📝 문제 설명
 
-- Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
-- 주요 제약: 0 <= nums.length <= 10^5 / -10^9 <= nums[i] <= 10^9
-- 핵심 분류: Array, Hash Table, Sorting
-- 문제 원문 전체는 저장하지 않고, 링크와 요약 정보만 보관합니다.
+Given an integer array `nums`, return `true` if any value appears **more than once** in the array, otherwise return `false`.
+
+**Example 1:**
+
+```text
+Input: nums = [1, 2, 3, 3]
+
+Output: true
+```
+
+**Example 2:**
+
+```text
+Input: nums = [1, 2, 3, 4]
+
+Output: false
+```
+
+**Constraints:**
+
+- `0 <= nums.length <= 10^5`
+
+- `-10^9 <= nums[i] <= 10^9`
 
 ## 📥 입력
 

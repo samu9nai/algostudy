@@ -15,10 +15,49 @@
 
 ## 📝 문제 설명
 
-- There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c. A province is a group of directly or indirectly connected cities and no other cities outside of the group. You…
-- 주요 제약: 1 <= n <= 200 / n == isConnected.length == isConnected[i].length
-- 핵심 분류: Depth-First Search, Breadth-First Search, Union-Find, Graph Theory
-- 문제 원문 전체는 저장하지 않고, 링크와 요약 정보만 보관합니다.
+There are `n` cities. Some of them are connected, while some are not. If city `a` is connected directly with city `b`, and city `b` is connected directly with city `c`, then city `a` is connected indirectly with city `c`.
+
+A **province** is a group of directly or indirectly connected cities and no other cities outside of the group.
+
+You are given an `n x n` matrix `isConnected` where `isConnected[i][j] = 1` if the `i-th` city and the `j-th` city are directly connected, and `isConnected[i][j] = 0` otherwise.
+
+Return the total number of **provinces**.
+
+**Example 1:**
+
+```text
+Input: isConnected = [
+ [1,1,0],
+ [1,1,0],
+ [0,0,1]
+]
+
+Output: 2
+```
+
+**Example 2:**
+
+```text
+Input: isConnected = [
+ [1,0,1],
+ [0,1,1],
+ [1,1,1]
+]
+
+Output: 1
+```
+
+**Constraints:**
+
+- `1 <= n <= 200`
+
+- `n == isConnected.length == isConnected[i].length`
+
+- `isConnected[i][j]` is either `0` or `1`.
+
+- `isConnected[i][i] == 1`
+
+- `isConnected[i][j] == isConnected[j][i]`
 
 ## 📥 입력
 

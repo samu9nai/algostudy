@@ -15,10 +15,39 @@
 
 ## 📝 문제 설명
 
-- Given a 2D grid grid where '1' represents land and '0' represents water, count and return the number of islands. An island is formed by connecting adjacent lands horizontally or vertically and is surrounded by water. You may assume water is surrounding the grid (i.e., all the edges are water).
-- 주요 제약: 1 <= grid.length, grid[i].length <= 100 / grid[i][j] is '0' or '1'.
-- 핵심 분류: Array, Depth-First Search, Breadth-First Search, Union-Find
-- 문제 원문 전체는 저장하지 않고, 링크와 요약 정보만 보관합니다.
+Given a 2D grid `grid` where `'1'` represents land and `'0'` represents water, count and return the number of islands.
+
+An **island** is formed by connecting adjacent lands horizontally or vertically and is surrounded by water. You may assume water is surrounding the grid (i.e., all the edges are water).
+
+**Example 1:**
+
+```text
+Input: grid = [
+ ["0","1","1","1","0"],
+ ["0","1","0","1","0"],
+ ["1","1","0","0","0"],
+ ["0","0","0","0","0"]
+ ]
+Output: 1
+```
+
+**Example 2:**
+
+```text
+Input: grid = [
+ ["1","1","0","0","1"],
+ ["1","1","0","0","1"],
+ ["0","0","1","0","0"],
+ ["0","0","0","1","1"]
+ ]
+Output: 4
+```
+
+**Constraints:**
+
+- `1 <= grid.length, grid[i].length <= 100`
+
+- `grid[i][j]` is `'0'` or `'1'`.
 
 ## 📥 입력
 

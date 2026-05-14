@@ -15,10 +15,41 @@
 
 ## 📝 문제 설명
 
-- Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order. An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
-- 주요 제약: 1 <= strs.length <= 1000. / 0 <= strs[i].length <= 100
-- 핵심 분류: Array, Hash Table, String, Sorting
-- 문제 원문 전체는 저장하지 않고, 링크와 요약 정보만 보관합니다.
+Given an array of strings `strs`, group all *anagrams* together into sublists. You may return the output in **any order**.
+
+An **anagram** is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+**Example 1:**
+
+```text
+Input: strs = ["act","pots","tops","cat","stop","hat"]
+
+Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
+```
+
+**Example 2:**
+
+```text
+Input: strs = ["x"]
+
+Output: [["x"]]
+```
+
+**Example 3:**
+
+```text
+Input: strs = [""]
+
+Output: [[""]]
+```
+
+**Constraints:**
+
+- `1 <= strs.length <= 1000`.
+
+- `0 <= strs[i].length <= 100`
+
+- `strs[i]` is made up of lowercase English letters.
 
 ## 📥 입력
 
