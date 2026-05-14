@@ -62,7 +62,7 @@ LeetCode와 NeetCode 풀이는 별도 source repository인 [`samu9nai/neetcode-s
 ```text
 samu9nai/neetcode-submissions
   → GitHub Actions
-  → 문제 메타데이터/요약 정규화
+  → 문제 메타데이터/본문 정규화
   → samu9nai/algostudy/LeetCode
 ```
 
@@ -91,7 +91,7 @@ LeetCode 문제별 README는 템플릿 기반으로 생성됩니다.
 - 문제 번호, 제목, 난이도, 태그, 링크를 정리합니다.
 - 예제 입력/출력과 제약 조건을 가능한 범위에서 파싱합니다.
 - 핵심 아이디어, 구현 흐름, 주의할 점, 복잡도 섹션을 생성합니다.
-- 문제 원문 전체는 저장하지 않고 요약 정보만 보관합니다.
+- 문제 설명은 가능한 경우 LeetCode/NeetCode에서 가져와 Markdown으로 보관합니다.
 - 제출 코드는 `solution.<ext>` 형식으로 저장합니다.
 
 템플릿은 source repository의 [`scripts/templates/leetcode-readme.md`](https://github.com/samu9nai/neetcode-submissions/blob/main/scripts/templates/leetcode-readme.md)에서 관리합니다.
@@ -99,6 +99,6 @@ LeetCode 문제별 README는 템플릿 기반으로 생성됩니다.
 ## 원칙
 
 - 풀이 코드는 플랫폼별 자동화 결과를 최대한 그대로 보존합니다.
-- 문제별 README는 링크, 메타데이터, 요약, 풀이 흐름을 빠르게 다시 보기 위한 용도로 사용합니다.
+- 문제별 README는 링크, 메타데이터, 문제 설명, 풀이 흐름을 빠르게 다시 보기 위한 용도로 사용합니다.
 - BaekjoonHub와 CodeTree가 관리하는 폴더는 별도 정규화 스크립트가 수정하지 않습니다.
 - LeetCode 정규화 파이프라인은 `LeetCode/` 폴더만 갱신합니다.
