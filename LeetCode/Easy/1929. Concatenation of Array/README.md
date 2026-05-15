@@ -12,7 +12,7 @@
 | 제출 일자 | 2026년 05월 11일 16:40:50 |
 | 문제 링크 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) |
 | 원본 경로 | `Data Structures & Algorithms/concatenation-of-array/submission-0.java` |
-<!-- AI_ANALYSIS: version=v1 model=gemini-2.5-flash hash=f09d13ed71fa4482 -->
+<!-- AI_ANALYSIS: version=v1 model=gemini-3.1-flash-lite hash=f09d13ed71fa4482 -->
 
 ## 📝 문제 설명
 
@@ -58,25 +58,25 @@ nums = [1,4,1,2]
 
 ## 💡 핵심 아이디어
 
-- 원본 배열의 길이를 두 배로 하는 새 배열을 생성합니다.
-- 원본 배열의 내용을 새 배열의 앞부분과 뒷부분에 각각 복사하여 채웁니다.
+- 입력 배열의 길이를 두 배로 확장한 새로운 배열을 생성합니다.
+- 기존 배열의 데이터를 새로운 배열의 앞부분과 뒷부분에 각각 복사합니다.
+- 자바의 내장 라이브러리인 System.arraycopy를 활용하여 효율적으로 메모리를 복사합니다.
 
 ## 🧮 정답 계산식
 
-결과 배열 ans의 i번째 요소는 nums[i % n]과 같습니다. (여기서 n은 nums의 길이)
+길이가 n인 배열 nums에 대해, 길이가 2n인 배열 ans를 생성하고 ans[i] = nums[i] 및 ans[i + n] = nums[i]를 만족하도록 값을 채웁니다.
 
 ## 🔍 구현 흐름
 
-1. 입력 배열 nums의 길이를 n으로 저장합니다.
-2. n * 2 크기의 새 정수 배열 doubled를 생성하고, Arrays.copyOf를 사용하여 nums의 내용을 doubled의 첫 n개 요소에 복사합니다.
-3. System.arraycopy를 사용하여 nums의 모든 요소를 doubled 배열의 n번째 인덱스부터 n개 요소만큼 복사합니다.
-4. 완성된 doubled 배열을 반환합니다.
+1. 입력 배열 nums의 길이를 구합니다.
+2. Arrays.copyOf를 사용하여 길이가 2배인 새로운 배열을 생성하고 초기 n개의 요소를 복사합니다.
+3. System.arraycopy를 사용하여 원본 배열의 모든 요소를 새로운 배열의 인덱스 n 위치부터 복사합니다.
+4. 완성된 배열을 반환합니다.
 
 ## ⚠️ 주의할 점
 
-- 새로 생성할 배열의 크기가 원본 배열 길이의 정확히 두 배가 되도록 해야 합니다.
-- System.arraycopy 사용 시, 복사할 원본 배열의 시작 인덱스, 대상 배열의 시작 인덱스, 복사할 요소의 개수를 정확히 지정해야 합니다.
-- Arrays.copyOf는 첫 번째 인자로 주어진 배열의 내용을 두 번째 인자로 주어진 길이의 새 배열에 복사하며, 길이가 원본보다 길면 나머지 부분은 기본값(0)으로 채워집니다. 이 문제에서는 첫 n개 요소만 채우는 데 사용됩니다.
+- 배열의 인덱스 범위를 초과하지 않도록 2n 크기의 배열을 정확히 할당해야 합니다.
+- System.arraycopy 사용 시 소스 배열, 시작 위치, 대상 배열, 대상 시작 위치, 복사 길이를 정확히 지정해야 합니다.
 
 ## 📁 제출 코드
 
@@ -90,4 +90,4 @@ nums = [1,4,1,2]
 
 ## ✅ 한 줄 요약
 
-주어진 배열을 두 번 연결한 새로운 배열을 생성하기 위해 Arrays.copyOf와 System.arraycopy를 활용하여 효율적으로 배열을 복사하는 문제입니다.
+입력 배열의 길이를 두 배로 늘린 뒤, 원본 데이터를 두 번 복사하여 이어 붙이는 방식으로 문제를 해결합니다.
