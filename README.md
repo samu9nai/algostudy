@@ -97,6 +97,7 @@ LeetCode 문제별 README는 템플릿 기반으로 생성됩니다.
 - 제출 코드는 `solution.<ext>` 형식으로 저장합니다.
 
 템플릿은 source repository의 [`scripts/templates/leetcode-readme.md`](https://github.com/samu9nai/neetcode-submissions/blob/main/scripts/templates/leetcode-readme.md)에서 관리합니다.
+NeetCode와 LeetCode의 slug가 다르면 source repository에서 `node scripts/add-problem-map.mjs --neetcode-url <url> --leetcode-url <url>`로 매핑을 추가합니다.
 
 ## 원칙
 
