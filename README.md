@@ -16,14 +16,14 @@ BaekjoonHub, CodeTree GitHub 연동, 그리고 LeetCode/NeetCode 동기화 파�
 ## 🧭 현재 스냅샷
 
 <!-- STATS:START -->
-2026년 05월 15일 기준입니다.
+2026년 05월 18일 기준입니다.
 
 | 플랫폼 | 문제 수 |
 | --- | ---: |
 | BOJ | 343 |
 | Programmers | 203 |
 | CodeTree | 6 |
-| LeetCode / NeetCode | 13 |
+| LeetCode / NeetCode | 14 |
 <!-- STATS:END -->
 
 ## 🗂️ 폴더 구조
