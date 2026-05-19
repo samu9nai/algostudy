@@ -23,7 +23,7 @@ BaekjoonHub, CodeTree GitHub 연동, 그리고 LeetCode/NeetCode 동기화 파�
 | BOJ | 343 |
 | Programmers | 210 |
 | CodeTree | 6 |
-| LeetCode / NeetCode | 18 |
+| LeetCode / NeetCode | 19 |
 <!-- STATS:END -->
 
 ## 🗂️ 폴더 구조
